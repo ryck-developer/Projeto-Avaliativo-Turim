@@ -1,0 +1,28 @@
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 93%;
+}
+
+td, th {
+border: 1px solid white;
+text-align: left;
+padding: 8px;
+background-color: #dddddd;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}
+
+.col-button{
+background-color: white;
+padding-left: 33%;
+}
+
+th[colspan="2"]{
+text-align: center;
+}
+.col-filho{
+background-color: #bfceff;
+}

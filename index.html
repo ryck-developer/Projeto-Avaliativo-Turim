@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/column-one-table.css">
+    <link rel="icon" href="assets/image/icons/thumbnail_large.webp" type="image/gif" sizes="16x16">
+    <title>Teste Seletivo</title>
+    <script src="assets/javascript/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="coluna">
+            <div>
+                <button type="button" onclick="gravar()">Gravar</button>
+                <button type="button" onclick="ler()">Ler</button>
+            </div>
+            <div style="margin-top: 20px;">
+                Nome: <input type="text" name="inputname" />
+                <button onclick="addPai()" type="button">Incluir</button>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <table id="person">
+                    <tr class="titulo">
+                        <th colspan="2">Pessoas</th>
+                    </tr>                 
+                </table>
+            </div>
+        </div>
+
+        <div class="coluna">
+            <textarea id="entry-textarea" name="entry-textarea" id="" cols="57" rows="17"></textarea>
+        </div>
+    </div>
+    <script src="assets/javascript/control.js"></script>
+    <script src="assets/javascript/main.js"></script>
+    <script>
+        var input = document.querySelector("input[name='inputname']");
+        // Execute a function when the user presses a key on the keyboard
+        input.addEventListener("keypress", function(event) {
+        // If the user presses the "Enter" key on the keyboard
+        if (event.key === "Enter") {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Trigger the button element with a click
+            addPai();
+            input.value = "";
+        }
+        });
+        updateState();
+    </script>
+</body>
+</html>
